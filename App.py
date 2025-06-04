@@ -129,12 +129,13 @@ with colB:
    st.metric(label = f"total arrecadado {year}", value = f"R$ {total_year:,.2f}", delta = f"{delta:.2f} %")
 
 
-col1, col2 = st.columns([0.5,0.5])    
+col1, col2 = st.columns([0.45,0.55])    
 with col1:  
 
     
     st.subheader('Receitas Próprias (R$)',)
-    st.table(data_proprias)
+    st.table(data_proprias)   
+    st.caption("")
     st.subheader('Transferências (R$)',)
     st.table(data_transf )
     
@@ -153,6 +154,8 @@ with col2:
 
    st.subheader('Estrutura da Receita', )
    st.plotly_chart(fig1, use_container_width=True,config = {'displayModeBar': False})   
+   
+   st.caption("")
    st.subheader('Evolução da Receita', )   
    colunas = st.pills(label = '', options = data['Classificação'].unique(), selection_mode = 'multi', default = ['ISS', 'ICMS'])
    data_p = pd.pivot_table(data, index=['Ano', 'Classificação'], aggfunc=sum, values='arrecadado')
