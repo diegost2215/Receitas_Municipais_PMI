@@ -129,7 +129,7 @@ with colB:
    st.metric(label = f"total arrecadado {year}", value = f"R$ {total_year:,.2f}", delta = f"{delta:.2f} %")
 
 
-col1, col2 = st.columns([0.45,0.55])    
+col1, col2 = st.columns([0.5,0.5])    
 with col1:  
 
     
