@@ -113,8 +113,8 @@ data, data_atualizacao = load_data()
 
 col0A,  col0B = st.columns([0.85,0.15])
 with col0A:
-   #st.header('Receitas Municipais - Em Desenvolvimento',)
-   st.image(image='banner3 - Copia.png')
+   st.header('Painel de Receitas - Município de Itajaí - Em Desenvolvimento')
+   #st.image(image='banner3 - Copia.png')
 with col0B:
   st.caption('')
   st.caption('')
