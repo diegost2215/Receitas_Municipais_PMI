@@ -10,7 +10,7 @@ mypallete = list(px.colors.qualitative.Antique) + list(px.colors.qualitative.T10
 st.set_page_config(layout ="wide", initial_sidebar_state="auto")
 
 
-@st.cache_data
+@st.cache_data(ttl ="1d")
 def load_data():
   #data = pd.read_feather('teste_receitas.feather')  
   cod_UG = 1
@@ -103,12 +103,13 @@ def load_data():
   return data, data_atualizacao
   
 
-
+'''
 try:
   if data_atualizacao != date.today():
     load_data.clear()
 except:
   pass
+'''
 data, data_atualizacao = load_data()
 
 col0A,  col0B = st.columns([0.85,0.15])
